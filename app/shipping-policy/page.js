@@ -17,7 +17,7 @@ export default function ShippingPolicy() {
 
       <h2>2. Order confirmation and onboarding</h2>
       <p>
-        After a successful payment you will see a confirmation on screen and receive a payment receipt by email. Within{" "}
+        After a successful payment you will see a confirmation on screen with your payment ID. Within{" "}
         <strong>1 business day</strong> we email you an onboarding brief asking for the information, brand assets and account access
         we need to start.
       </p>

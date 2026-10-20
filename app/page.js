@@ -23,9 +23,9 @@ const people = [
 
 const reasons = [
   [Tag, "Prices up front. No sales calls.", "Every package shows its price, scope and timing before you pay.", "wide brand"],
-  [RefreshCwOff, "Nothing renews by itself.", "Monthly plans cover 30 days. The next month is always your call.", ""],
+  [RefreshCwOff, "No auto-renewals.", "Monthly plans cover 30 days. The next month is always your call.", ""],
   [Wallet, "Your ad budget stays yours.", "Ad spend goes straight to Meta or Google from your own account.", ""],
-  [Lock, "Checkout secured by Razorpay.", "We never see or store your card details, and every payment comes with an emailed receipt.", "wide"],
+  [Lock, "Checkout secured by Razorpay.", "You pay in Razorpay's secure window. We never see or store your card details.", "wide"],
 ];
 
 const steps = [
