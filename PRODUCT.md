@@ -28,7 +28,7 @@ Next.js 16 App Router site. Six packages in `lib/site.js` (user confirmed keepin
 
 ## Brand Commitments
 
-Name "Digi Solution LLC". User asked for a fully premium feel for a US audience, with minimal premium icons and a strong colour and type choice. Standing preference: bright, Apple-style clean (light grounds, real photography); the user rejected a dark, text-led design. Logo files supplied by the user: `DDigi Solution Wellness Logo.png` (lockup, transparent, dark ink; wordmark reads "DDigi", spelling unconfirmed) and `Modern D-Shaped Leaf Wellness Icon.png` (app icon, white and green D on black). Derived assets live in `public/brand/` and `app/icon.png`.
+Name "Digi Solution LLC". User asked for a fully premium feel for a US audience, with minimal premium icons and a strong colour and type choice. Standing preference: bright, Apple-style clean (light grounds, real photography); the user rejected a dark, text-led design. Logo files supplied by the user: `DDigi Solution Wellness Logo.png` (lockup, transparent, dark ink; wordmark reads "DDigi", confirmed intentional by the user on 2026-10-20) and `Modern D-Shaped Leaf Wellness Icon.png` (app icon, white and green D on black). Derived assets live in `public/brand/` and `app/icon.png`.
 
 ## Evidence on Hand
 
