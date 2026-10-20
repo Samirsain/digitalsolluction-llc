@@ -87,7 +87,6 @@ svg { flex-shrink: 0; }
 .hero-note { margin-top: 14px; color: var(--muted); font-size: 0.95rem; }
 /* hero stage: a phone scrolling example ads, with work floating around it */
 .stage { --pw: 296px; --ph: 610px; position: relative; height: calc(var(--ph) + 56px); margin-top: clamp(48px, 6vw, 72px); }
-.stage::before { content: ""; position: absolute; inset: 4% 20% 10%; background: radial-gradient(closest-side, rgba(52, 199, 123, 0.2), transparent); }
 .phone { position: absolute; z-index: 3; left: 50%; top: 0; width: var(--pw); height: var(--ph); padding: 11px; transform: translateX(-50%); border-radius: 52px; background: #1d1d1f; box-shadow: inset 0 0 0 2px #3a3a3c, 0 40px 80px -24px rgba(0, 0, 0, 0.35), 0 18px 36px -18px rgba(0, 0, 0, 0.25); }
 .screen { position: relative; height: 100%; overflow: hidden; border-radius: 42px; background: var(--white); text-align: left; }
 .island { position: absolute; z-index: 2; top: 10px; left: 50%; width: 92px; height: 27px; transform: translateX(-50%); border-radius: 20px; background: #000; }
@@ -129,7 +128,7 @@ svg { flex-shrink: 0; }
 .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .tile { display: flex; flex-direction: column; overflow: hidden; background: var(--white); border-radius: var(--radius-tile); }
 .tile-text { padding: clamp(28px, 3.4vw, 44px) clamp(28px, 3.4vw, 44px) 28px; }
-.tile h3 { font-family: var(--font-inter-tight), sans-serif; font-weight: 600; font-size: clamp(1.6rem, 2.4vw, 2.1rem); letter-spacing: -0.03em; line-height: 1.1; }
+.tile h3 { font-family: var(--font-inter-tight), sans-serif; font-weight: 600; font-size: clamp(1.8rem, 3vw, 2.6rem); letter-spacing: -0.03em; line-height: 1.1; }
 .tile p { margin-top: 10px; color: var(--muted); max-width: 38ch; }
 .tile-meta { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 18px; font-size: 0.95rem; }
 .tile-meta strong { font-weight: 600; }
@@ -169,20 +168,26 @@ svg { flex-shrink: 0; }
 .person h3 { margin-top: 18px; font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; }
 .person p { margin-top: 6px; color: var(--muted); font-size: 0.95rem; }
 
-/* reasons */
-.reasons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(36px, 5vw, 56px) clamp(24px, 4vw, 48px); }
-.reason svg { color: var(--brand); }
-.reason h3 { margin-top: 16px; font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; }
-.reason p { margin-top: 6px; color: var(--muted); font-size: 0.95rem; max-width: 34ch; }
+/* bento of statements */
+.bento { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.bento-tile { display: flex; flex-direction: column; justify-content: space-between; gap: 56px; min-height: 320px; padding: clamp(28px, 3.4vw, 44px); background: var(--gray); border-radius: var(--radius-tile); }
+.bento-tile.wide { grid-column: span 2; }
+.bento-tile.full { grid-column: 1 / -1; min-height: 0; }
+.bento-tile.brand { background: var(--brand); color: var(--white); }
+.bento-icon { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 20px; background: var(--white); color: var(--brand); box-shadow: 0 6px 16px -8px rgba(0, 0, 0, 0.18); }
+.bento-tile.brand .bento-icon { background: rgba(255, 255, 255, 0.14); color: var(--white); box-shadow: none; }
+.bento-tile h3 { font-family: var(--font-inter-tight), sans-serif; font-weight: 600; font-size: clamp(1.75rem, 3vw, 2.6rem); letter-spacing: -0.035em; line-height: 1.08; max-width: 18ch; }
+.bento-tile.full h3 { max-width: none; }
+.bento-tile p { margin-top: 12px; color: var(--muted); max-width: 46ch; }
+.bento-tile.brand p { color: var(--white); }
 
 /* steps */
 .steps { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; list-style: none; margin: 0; padding: 0; }
-.steps::before { content: ""; position: absolute; top: 19px; left: 20px; right: 20px; height: 2px; background: var(--line); }
+.steps::before { content: ""; position: absolute; top: 17px; left: 42px; right: 42px; height: 2px; background: var(--line); }
 .step { position: relative; }
-.step-dot { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--white); border: 2px solid var(--line); color: var(--brand); }
+.step-dot { position: relative; display: grid; place-items: center; width: 84px; height: 36px; border-radius: 980px; background: var(--white); border: 2px solid var(--line); color: var(--brand); font-size: 0.85rem; font-weight: 600; white-space: nowrap; }
 .step:first-child .step-dot { background: var(--brand); border-color: var(--brand); color: var(--white); }
-.step-day { display: block; margin-top: 20px; color: var(--brand); font-size: 0.85rem; font-weight: 600; }
-.step h3 { margin-top: 4px; font-size: 1.2rem; font-weight: 600; letter-spacing: -0.02em; }
+.step h3 { margin-top: 20px; font-size: 1.2rem; font-weight: 600; letter-spacing: -0.02em; }
 .step p { margin-top: 6px; color: var(--muted); font-size: 0.95rem; }
 
 /* closing */
@@ -234,12 +239,14 @@ svg { flex-shrink: 0; }
   .plans { grid-template-columns: minmax(0, 1fr); max-width: 480px; margin-left: auto; margin-right: auto; gap: 28px; }
   .people { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 72%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; scrollbar-width: none; }
   .person { scroll-snap-align: start; }
-  .reasons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bento { grid-template-columns: minmax(0, 1fr); }
+  .bento-tile.wide, .bento-tile.full { grid-column: auto; }
+  .bento-tile { min-height: 0; gap: 40px; }
   .steps { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  .steps::before { top: 20px; bottom: 20px; left: 19px; right: auto; width: 2px; height: auto; }
-  .step { display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: 20px; }
-  .step-dot { grid-row: span 3; }
-  .step-day { margin-top: 0; }
+  .steps::before { top: 18px; bottom: 18px; left: 41px; right: auto; width: 2px; height: auto; }
+  .step { display: grid; grid-template-columns: 84px minmax(0, 1fr); column-gap: 20px; }
+  .step-dot { grid-row: span 2; }
+  .step h3 { margin-top: 6px; }
   .footer-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .footer-grid > div { grid-column: 1 / -1; }
 }
@@ -261,7 +268,6 @@ svg { flex-shrink: 0; }
 }
 @media (max-width: 600px) {
   .nav-links { display: none; }
-  .reasons { grid-template-columns: minmax(0, 1fr); }
   .closing-photo, .page-photo { aspect-ratio: 4 / 3; }
   .plan { padding: 32px 24px 28px; }
 }

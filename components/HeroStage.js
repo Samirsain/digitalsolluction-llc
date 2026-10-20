@@ -3,10 +3,10 @@ import Photo from "./Photo.js";
 
 // Fictional example ads, labelled as examples on the page; never present these as clients.
 const ads = [
-  { brand: "Northside Strength", handle: "northsidestrength", cta: "Book a class", caption: "Your first week is on us. Classes for every level.", photo: "1757924284732-4189190321cf" },
-  { brand: "Bloom Botanics", handle: "bloombotanics", cta: "Shop now", caption: "Clean skincare, made for daily rituals.", photo: "1739950839930-ef45c078f316" },
-  { brand: "Coach Maya Fit", handle: "coachmayafit", cta: "Apply now", caption: "1:1 strength coaching, online or in person.", photo: "1758875569256-f37c438cac65" },
-  { brand: "Still Studio", handle: "stillstudio", cta: "Learn more", caption: "New-member intro classes start this week.", photo: "1783841193384-4269c68aa050" },
+  { brand: "Northside Strength", handle: "northsidestrength", cta: "Book a class", caption: "Your first week is on us. Classes for every level.", photo: "1758957646695-ec8bce3df462" },
+  { brand: "Bloom Botanics", handle: "bloombotanics", cta: "Shop now", caption: "Clean skincare, made for daily rituals.", photo: "1713434638446-13b4a15b728e" },
+  { brand: "Coach Maya Fit", handle: "coachmayafit", cta: "Apply now", caption: "1:1 strength coaching, online or in person.", photo: "1648542036561-e1d66a5ae2b1" },
+  { brand: "Still Studio", handle: "stillstudio", cta: "Learn more", caption: "New-member intro classes start this week.", photo: "1552196563-55cd4e45efb3" },
 ];
 
 const s = { size: 18, strokeWidth: 1.75, "aria-hidden": true };
@@ -48,7 +48,7 @@ export default function HeroStage() {
         <figcaption>Paid ads</figcaption>
       </figure>
       <figure className="float-card float-right">
-        <Photo id="1695408247109-3bf125ad0538" alt="" ratio={0.78} sizes="240px" />
+        <Photo id="1630797160666-38e8c5ba44c1" alt="" ratio={0.78} sizes="240px" />
         <figcaption>Creator content</figcaption>
       </figure>
 

@@ -7,9 +7,9 @@ import { company } from "../../lib/site.js";
 export const metadata = { title: "About Us", description: "About Digi Solution LLC, a digital marketing company for the health, fitness and wellness industry." };
 
 const pillars = [
-  [Compass, "Our mission", "Give wellness brands of every size access to the same growth tools as the big players, with honest pricing and clear reporting."],
-  [Sparkles, "What we do", "Paid advertising on Meta and Google, social media management, ad creative production and influencer promotion campaigns."],
-  [Workflow, "How we work", "Fixed packages, fast onboarding and responsible advertising that follows platform rules and consumer-protection laws."],
+  [Compass, "Big-brand growth, for every wellness brand.", "Our mission: give wellness brands of every size the same growth tools as the big players, with honest pricing and clear reporting.", "wide brand"],
+  [Sparkles, "Ads, social, creative, creators.", "Paid advertising on Meta and Google, social media management, ad creative production and influencer campaigns.", ""],
+  [Workflow, "Fixed packages. Fast onboarding. Responsible ads.", "We start within one business day and follow platform rules and consumer-protection laws on every campaign.", "full"],
 ];
 
 const icon = { size: 24, strokeWidth: 1.75, "aria-hidden": true };
@@ -36,12 +36,16 @@ export default function About() {
             We help businesses, influencers and professionals grow their online presence by creating engaging campaigns, running
             targeted promotions and building genuine connections with their audiences.
           </p>
-          <div className="reasons">
-            {pillars.map(([Icon, title, text]) => (
-              <div className="reason" key={title}>
-                <Icon size={32} strokeWidth={1.5} aria-hidden="true" />
-                <h3>{title}</h3>
-                <p>{text}</p>
+          <div className="bento">
+            {pillars.map(([Icon, title, text, variant]) => (
+              <div className={`bento-tile ${variant}`} key={title}>
+                <span className="bento-icon">
+                  <Icon size={30} strokeWidth={1.5} aria-hidden="true" />
+                </span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </div>
               </div>
             ))}
           </div>

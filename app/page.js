@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronRight, Lock, MessageCircle, RefreshCwOff, ShieldCheck, Tag, Wallet } from "lucide-react";
+import { ChevronRight, Lock, RefreshCwOff, Tag, Wallet } from "lucide-react";
 import HeroStage from "../components/HeroStage.js";
 import Photo from "../components/Photo.js";
 import Pricing from "../components/Pricing.js";
@@ -22,12 +22,10 @@ const people = [
 ];
 
 const reasons = [
-  [Tag, "Prices up front", "Every package shows its price, scope and timing before you pay. No sales call needed."],
-  [RefreshCwOff, "No auto-renewals", "Monthly plans cover 30 days. Booking the next month is always your call."],
-  [Wallet, "Your ad spend stays yours", "Ad budgets are paid straight to Meta or Google from your own account."],
-  [Lock, "Secure checkout", "Payments are processed by Razorpay. We never see or store your card details."],
-  [ShieldCheck, "Honest, compliant ads", "Claims you can back up, FTC-ready creator disclosures, and no promised results."],
-  [MessageCircle, "Fast replies", "We answer every email within one business day, from onboarding to reporting."],
+  [Tag, "Prices up front. No sales calls.", "Every package shows its price, scope and timing before you pay.", "wide brand"],
+  [RefreshCwOff, "Nothing renews by itself.", "Monthly plans cover 30 days. The next month is always your call.", ""],
+  [Wallet, "Your ad budget stays yours.", "Ad spend goes straight to Meta or Google from your own account.", ""],
+  [Lock, "Checkout secured by Razorpay.", "We never see or store your card details, and every payment comes with an emailed receipt.", "wide"],
 ];
 
 const steps = [
@@ -116,12 +114,16 @@ export default function Home() {
           <div className="section-intro center">
             <h2 className="title">Why brands book with us.</h2>
           </div>
-          <div className="reasons">
-            {reasons.map(([Icon, title, text]) => (
-              <div className="reason" key={title}>
-                <Icon size={32} strokeWidth={1.5} aria-hidden="true" />
-                <h3>{title}</h3>
-                <p>{text}</p>
+          <div className="bento">
+            {reasons.map(([Icon, title, text, variant]) => (
+              <div className={`bento-tile ${variant}`} key={title}>
+                <span className="bento-icon">
+                  <Icon size={30} strokeWidth={1.5} aria-hidden="true" />
+                </span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -135,10 +137,9 @@ export default function Home() {
             <p className="sub">A simple, predictable process from the day you pay.</p>
           </div>
           <ol className="steps">
-            {steps.map(([day, title, text], i) => (
+            {steps.map(([day, title, text]) => (
               <li className="step" key={day}>
-                <span className="step-dot" aria-hidden="true">{i + 1}</span>
-                <span className="step-day">{day}</span>
+                <span className="step-dot">{day}</span>
                 <h3>{title}</h3>
                 <p>{text}</p>
               </li>
